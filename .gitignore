@@ -17,6 +17,9 @@
 # Debugger Files
 *.pdb
 
+#Visual Studio other files
+*.vs/
+
 # Compiled Dynamic libraries
 *.so
 *.dylib
@@ -39,3 +42,7 @@
 
 # debug information files
 *.dwo
+
+#logfiles
+*.tlog
+*.log

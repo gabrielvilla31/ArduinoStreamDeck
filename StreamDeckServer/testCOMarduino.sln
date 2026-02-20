@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.34112.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testCOMarduino", "testCOMarduino\testCOMarduino.vcxproj", "{1B3D6E9F-8F9F-4A16-8946-D5E578442A04}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tinyxml", "tinyxml", "{5691D57E-9FE7-4036-819C-E0040C3C4AE4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tinyxml", "tinyxml\tinyxml_lib.vcxproj", "{C406DAEC-0886-4771-8DEA-9D7329B46CC1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tinyxmlSTL", "tinyxml\tinyxmlSTL.vcxproj", "{A3A84737-5017-4577-B8A2-79429A25B8B6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tinyXmlTest", "tinyxml\tinyXmlTest.vcxproj", "{34719950-09E8-457E-BE23-8F1CE3A1F1F6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tinyXmlTestSTL", "tinyxml\tinyXmlTestSTL.vcxproj", "{53ED5965-5BCA-47B5-9EB0-EDD20882F22F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B3D6E9F-8F9F-4A16-8946-D5E578442A04}.Debug|x64.ActiveCfg = Debug|x64
+		{1B3D6E9F-8F9F-4A16-8946-D5E578442A04}.Debug|x64.Build.0 = Debug|x64
+		{1B3D6E9F-8F9F-4A16-8946-D5E578442A04}.Debug|x86.ActiveCfg = Debug|Win32
+		{1B3D6E9F-8F9F-4A16-8946-D5E578442A04}.Debug|x86.Build.0 = Debug|Win32
+		{1B3D6E9F-8F9F-4A16-8946-D5E578442A04}.Release|x64.ActiveCfg = Release|x64
+		{1B3D6E9F-8F9F-4A16-8946-D5E578442A04}.Release|x64.Build.0 = Release|x64
+		{1B3D6E9F-8F9F-4A16-8946-D5E578442A04}.Release|x86.ActiveCfg = Release|Win32
+		{1B3D6E9F-8F9F-4A16-8946-D5E578442A04}.Release|x86.Build.0 = Release|Win32
+		{C406DAEC-0886-4771-8DEA-9D7329B46CC1}.Debug|x64.ActiveCfg = Debug|Win32
+		{C406DAEC-0886-4771-8DEA-9D7329B46CC1}.Debug|x86.ActiveCfg = Debug|Win32
+		{C406DAEC-0886-4771-8DEA-9D7329B46CC1}.Debug|x86.Build.0 = Debug|Win32
+		{C406DAEC-0886-4771-8DEA-9D7329B46CC1}.Release|x64.ActiveCfg = Release|Win32
+		{C406DAEC-0886-4771-8DEA-9D7329B46CC1}.Release|x86.ActiveCfg = Release|Win32
+		{C406DAEC-0886-4771-8DEA-9D7329B46CC1}.Release|x86.Build.0 = Release|Win32
+		{A3A84737-5017-4577-B8A2-79429A25B8B6}.Debug|x64.ActiveCfg = Debug|Win32
+		{A3A84737-5017-4577-B8A2-79429A25B8B6}.Debug|x86.ActiveCfg = Debug|Win32
+		{A3A84737-5017-4577-B8A2-79429A25B8B6}.Debug|x86.Build.0 = Debug|Win32
+		{A3A84737-5017-4577-B8A2-79429A25B8B6}.Release|x64.ActiveCfg = Release|Win32
+		{A3A84737-5017-4577-B8A2-79429A25B8B6}.Release|x86.ActiveCfg = Release|Win32
+		{A3A84737-5017-4577-B8A2-79429A25B8B6}.Release|x86.Build.0 = Release|Win32
+		{34719950-09E8-457E-BE23-8F1CE3A1F1F6}.Debug|x64.ActiveCfg = Debug|Win32
+		{34719950-09E8-457E-BE23-8F1CE3A1F1F6}.Debug|x86.ActiveCfg = Debug|Win32
+		{34719950-09E8-457E-BE23-8F1CE3A1F1F6}.Debug|x86.Build.0 = Debug|Win32
+		{34719950-09E8-457E-BE23-8F1CE3A1F1F6}.Release|x64.ActiveCfg = Release|Win32
+		{34719950-09E8-457E-BE23-8F1CE3A1F1F6}.Release|x86.ActiveCfg = Release|Win32
+		{34719950-09E8-457E-BE23-8F1CE3A1F1F6}.Release|x86.Build.0 = Release|Win32
+		{53ED5965-5BCA-47B5-9EB0-EDD20882F22F}.Debug|x64.ActiveCfg = Debug|Win32
+		{53ED5965-5BCA-47B5-9EB0-EDD20882F22F}.Debug|x86.ActiveCfg = Debug|Win32
+		{53ED5965-5BCA-47B5-9EB0-EDD20882F22F}.Debug|x86.Build.0 = Debug|Win32
+		{53ED5965-5BCA-47B5-9EB0-EDD20882F22F}.Release|x64.ActiveCfg = Release|Win32
+		{53ED5965-5BCA-47B5-9EB0-EDD20882F22F}.Release|x86.ActiveCfg = Release|Win32
+		{53ED5965-5BCA-47B5-9EB0-EDD20882F22F}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C406DAEC-0886-4771-8DEA-9D7329B46CC1} = {5691D57E-9FE7-4036-819C-E0040C3C4AE4}
+		{A3A84737-5017-4577-B8A2-79429A25B8B6} = {5691D57E-9FE7-4036-819C-E0040C3C4AE4}
+		{34719950-09E8-457E-BE23-8F1CE3A1F1F6} = {5691D57E-9FE7-4036-819C-E0040C3C4AE4}
+		{53ED5965-5BCA-47B5-9EB0-EDD20882F22F} = {5691D57E-9FE7-4036-819C-E0040C3C4AE4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB478058-50DA-44B0-9E19-CB0181B53566}
+	EndGlobalSection
+EndGlobal
