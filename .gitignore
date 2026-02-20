@@ -46,3 +46,11 @@
 #logfiles
 *.tlog
 *.log
+
+#Unwanted compil folder
+Release
+Releasetinyxml
+ReleasetinyxmlSTL
+ReleasetinyXmlTest
+ReleasetinyXmlTestSTL
+x64
