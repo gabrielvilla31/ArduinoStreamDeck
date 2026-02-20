@@ -14,7 +14,7 @@ When a button is pressed:
 Additionally, the repository includes a 3D printable enclosure (.stl) designed to house the Arduino and the 4 buttons.
 
 🏗️ Project Architecture
-
+````
 [ Buttons ]
      ↓
 [ Arduino ]
@@ -24,7 +24,7 @@ Additionally, the repository includes a 3D printable enclosure (.stl) designed t
 [ config.xml ]
      ↓
 [ Script Execution ]
-
+````
 ⚙️ XML Configuration
 
 Button actions are defined in the config.xml file.
