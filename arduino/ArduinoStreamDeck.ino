@@ -3,6 +3,7 @@
   by Gaby
   
 */
+#define DELAY_HOLD      1000
 
 // constants won't change. They're used here to set pin numbers:
 const int buttonPin1 = 5;   // (D1)
@@ -12,15 +13,21 @@ const int buttonPin4 = 12;  // (D6)
 
 
 // variables will change:
-int button1_previous_state = 0;  // variable for reading the pushbutton status
-int button1_state = 0;  // variable for reading the pushbutton status
-int button2_previous_state = 0;  // variable for reading the pushbutton status
-int button2_state = 0;  // variable for reading the pushbutton status
-int button3_previous_state = 0;  // variable for reading the pushbutton status
-int button3_state = 0;  // variable for reading the pushbutton status
-int button4_previous_state = 0;  // variable for reading the pushbutton status
-int button4_state = 0;  // variable for reading the pushbutton status
-int valeur = 0; // Lire une valeur sur la broche A0
+unsigned long button1PressStart = 0; // Time when button was pressed
+bool button1PreviouslyPressed = false;
+bool button1_hold_sent = false;
+
+unsigned long button2PressStart = 0; // Time when button was pressed
+bool button2PreviouslyPressed = false;
+bool button2_hold_sent = false;
+
+unsigned long button3PressStart = 0; // Time when button was pressed
+bool button3PreviouslyPressed = false;
+bool button3_hold_sent = false;
+
+unsigned long button4PressStart = 0; // Time when button was pressed
+bool button4PreviouslyPressed = false;
+bool button4_hold_sent = false;
 
 //print template to use <<
 template <typename T>
@@ -45,36 +52,95 @@ void setup() {
 void loop() {
   // read the state of the pushbuttons values:
   //1 if untouched, 0 if pressed
-  button1_state = digitalRead(buttonPin1);
-  button2_state = digitalRead(buttonPin2);
-  button3_state = digitalRead(buttonPin3);
-  button4_state = digitalRead(buttonPin4);
+  bool button1_pressed = digitalRead(buttonPin1) == LOW;  
+  bool button2_pressed = digitalRead(buttonPin2) == LOW;  
+  bool button3_pressed = digitalRead(buttonPin3) == LOW;  
+  bool button4_pressed = digitalRead(buttonPin4) == LOW;  
 
-// check if the pushbuttons are pressed. If it is,send a message through:
-  if (button1_state == LOW && button1_state != button1_previous_state) {
-    Serial<<"Button 1"; 
+
+  if (button1_pressed) {
+    if (!button1PreviouslyPressed) {
+      // Le bouton vient juste d’être pressé
+      button1PressStart = millis();
+      button1PreviouslyPressed = true;
+    }
+
+    if (millis() - button1PressStart >= DELAY_HOLD && !button1_hold_sent) {
+      button1_hold_sent=true;
+      Serial<<"Button 1/Hold";
+    }
   }
-  if (button2_state == LOW && button2_state != button2_previous_state) {
-    Serial<<"Button 2"; 
-  }
-  if (button3_state == LOW && button3_state != button3_previous_state) {
-    Serial<<"Button 3";
-   }
-  if (button4_state == LOW && button4_state != button4_previous_state) {
-    Serial<<"Button 4"; 
+  else {
+    if (button1PreviouslyPressed && !button1_hold_sent) {
+      Serial<<"Button 1/Press";
+    }
+
+    button1_hold_sent=false;
+    button1PreviouslyPressed = false;
   }
 
-  //Remember previous pushbuttons values
-  button1_previous_state=button1_state;
-  button2_previous_state=button2_state;
-  button3_previous_state=button3_state;
-  button4_previous_state=button4_state;
+  if (button2_pressed) {
+    if (!button2PreviouslyPressed) {
+      // Le bouton vient juste d’être pressé
+      button2PressStart = millis();
+      button2PreviouslyPressed = true;
+    }
+
+    if (millis() - button2PressStart >= DELAY_HOLD && !button2_hold_sent) {
+      button2_hold_sent=true;
+      Serial<<"Button 2/Hold";
+    }
+  }
+  else {
+    if (button2PreviouslyPressed && !button2_hold_sent) {
+      Serial<<"Button 2/Press";
+    }
+
+    button2_hold_sent=false;
+    button2PreviouslyPressed = false;
+  }
   
-  //Serial<<"BouttonUp 1 : "<< buttonState1<<'\n'; // Envoyer la valeur via le port série
-  //Serial<<"BouttonUp 2 : "<< buttonState2<<'\n'; // Envoyer la valeur via le port série
-  //Serial<<"BouttonUp 3 : "<< buttonState3<<'\n'; // Envoyer la valeur via le port série
-  //Serial<<"BouttonUp 4 : "<< buttonState4<<'\n'; // Envoyer la valeur via le port série
-  
+  if (button3_pressed) {
+    if (!button3PreviouslyPressed) {
+      // Le bouton vient juste d’être pressé
+      button3PressStart = millis();
+      button3PreviouslyPressed = true;
+    }
+
+    if (millis() - button3PressStart >= DELAY_HOLD && !button3_hold_sent) {
+      button3_hold_sent=true;
+      Serial<<"Button 3/Hold";
+    }
+  }
+  else {
+    if (button3PreviouslyPressed && !button3_hold_sent) {
+      Serial<<"Button 3/Press";
+    }
+
+    button3_hold_sent=false;
+    button3PreviouslyPressed = false;
+  }
+
+  if (button4_pressed) {
+    if (!button4PreviouslyPressed) {
+      // Le bouton vient juste d’être pressé
+      button4PressStart = millis();
+      button4PreviouslyPressed = true;
+    }
+
+    if (millis() - button4PressStart >= DELAY_HOLD && !button4_hold_sent) {
+      button4_hold_sent=true;
+      Serial<<"Button 4/Hold";
+    }
+  }
+  else {
+    if (button4PreviouslyPressed && !button4_hold_sent) {
+      Serial<<"Button 4/Press";
+    }
+
+    button4_hold_sent=false;
+    button4PreviouslyPressed = false;
+  }
 
   digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
   delay(50);                      // wait for 50 ms
