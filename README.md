@@ -64,6 +64,7 @@ The 4 push buttons
 You can print it using any standard 3D printer (PLA recommended).
 
 🚀 Installation
+
 1️⃣ Arduino
 
 Open the .ino file in the Arduino IDE
