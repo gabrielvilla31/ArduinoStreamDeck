@@ -48,14 +48,16 @@ Button actions are defined in the config.xml file.
 	/>
 	<node 
 		id="Button 4" 
-		actionPress="Start Script" argPress="E:\Projet\script4.bat"
-		actionHold="Start Script" argHold="E:\Projet\script4H.bat"
+		actionPress="lock" argPress=""
+		actionHold="" argHold=""
 	/>
 </config>
 ```
 ▶️ Currently Supported Action
-Action Type	    Description
-script	        Launches a script (.bat, .ps1, .exe, etc.)
+Action Type	    Description     Arguments
+
+script	        Launches a script (.bat tested, .ps1 untested, .exe untested), script path as argument
+lock			Locks session and stops music, no argument
 
 🖨️ 3D Printable Enclosure
 The repository includes a .stl 3D model for a custom enclosure designed to house:
