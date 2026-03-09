@@ -12,8 +12,8 @@
 	/>
 	<node 
 		id="Button 3" 
-		actionPress="script" argPress="E:\Projet\Simnext\SNCFSNTrainSim\deploy\Startup\Start_Local.bat"
-		actionHold="script" argHold="E:\Projet\Simnext\SNCFSNTrainSim\deploy\Startup\KillAll.bat"
+		actionPress="lock" argPress=""
+		actionHold="script" argHold=""
 	/>
 	<node 
 		id="Button 4" 

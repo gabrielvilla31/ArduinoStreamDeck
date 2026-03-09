@@ -99,15 +99,15 @@ std::string GetArg(const std::string& id, const std::vector<actionBoutton>& butt
 
 void StartScript(const std::string path)
 {
-	// Extraire le répertoire du script
+	// Extract script directory path
 	std::string::size_type pos = path.find_last_of("\\/");
 	std::string scriptDir = path.substr(0, pos);
 
-	// Sauvegarder le répertoire courant
+	// Save current path
 	char originalDir[MAX_PATH];
 	GetCurrentDirectoryA(MAX_PATH, originalDir);
 
-	// Changer vers le répertoire du script
+	// Set current directory to script directory
 	SetCurrentDirectoryA(scriptDir.c_str());
 
 
@@ -143,6 +143,8 @@ void StartScript(const std::string path)
 		// Close process and thread handles
 		CloseHandle(pi.hProcess);
 		CloseHandle(pi.hThread);
+
+		// set current directory to original
 		SetCurrentDirectoryA(originalDir);
 
 	}
@@ -151,6 +153,12 @@ void StartScript(const std::string path)
 	}
 }
 
+
+void LockPcAndMute() {
+	keybd_event(VK_MEDIA_STOP, 0, 0, 0);
+	keybd_event(VK_MEDIA_STOP, 0, KEYEVENTF_KEYUP, 0);
+	LockWorkStation();
+}
 
 void ExecuteAction(const std::string& id, const std::vector<actionBoutton>& buttonsAction)
 {
@@ -167,6 +175,10 @@ void ExecuteAction(const std::string& id, const std::vector<actionBoutton>& butt
 		if (actionToPerform == "script")
 		{
 			StartScript(GetArg(firstPart, buttonsAction, press));
+		}
+		if (actionToPerform == "lock")
+		{
+			LockPcAndMute();
 		}
 	}
 
@@ -193,7 +205,7 @@ void Loop(const std::vector<actionBoutton>& buttonsAction)
 	//char portName[] = "\\\\.\\COM5";  
 
 	while (true) {
-		// Ouvre le port série
+
 		for (int i = 0; i < ports.size(); i++) {
 			//open serial port
 			hSerial = CreateFileA(ports[i].c_str(), GENERIC_READ, 0, NULL, OPEN_EXISTING, 0, NULL);
