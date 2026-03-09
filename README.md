@@ -54,10 +54,13 @@ Button actions are defined in the config.xml file.
 </config>
 ```
 ▶️ Currently Supported Action
-Action Type	    Description     Arguments
 
-script	        Launches a script (.bat tested, .ps1 untested, .exe untested), script path as argument
-lock			Locks session and stops music, no argument
+
+**Action**		Description		Arguments
+
+**script**		Launches a script (.bat tested, .ps1 untested, .exe untested)   script path as argument
+
+**lock**		Locks session and stops music     no argument
 
 🖨️ 3D Printable Enclosure
 The repository includes a .stl 3D model for a custom enclosure designed to house:
