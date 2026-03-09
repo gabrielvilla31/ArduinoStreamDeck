@@ -164,7 +164,7 @@ void ExecuteAction(const std::string& id, const std::vector<actionBoutton>& butt
 
 		std::string actionToPerform = GetAction(firstPart, buttonsAction, press);
 
-		if (actionToPerform == "Start Script")
+		if (actionToPerform == "script")
 		{
 			StartScript(GetArg(firstPart, buttonsAction, press));
 		}

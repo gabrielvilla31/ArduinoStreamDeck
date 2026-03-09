@@ -2,22 +2,22 @@
 <config test="plop">
 	<node 
 		id="Button 1" 
-		actionPress="Start Script" argPress="C:\Simulator\scripts\basex\RunBaseXHTTPServer.bat" 
-		actionHold="Start Script" argHold="C:\Simulator\scripts\basex\StopBaseXHTTPServer.bat"
+		actionPress="script" argPress="C:\Simulator\scripts\basex\RunBaseXHTTPServer.bat" 
+		actionHold="script" argHold="C:\Simulator\scripts\basex\StopBaseXHTTPServer.bat"
 	/>
 	<node 
 		id="Button 2" 
-		actionPress="Start Script" argPress="E:\Projet\PSCHITTtrain\PSCHITT\deploy\Startup\Start_Local_Dev.bat"
-		actionHold="Start Script" argHold="E:\Projet\PSCHITTtrain\PSCHITT\deploy\Startup\KillAll.bat"
+		actionPress="script" argPress="E:\Projet\PSCHITTtrain\PSCHITT\deploy\Startup\Start_Local_Dev.bat"
+		actionHold="script" argHold="E:\Projet\PSCHITTtrain\PSCHITT\deploy\Startup\KillAll.bat"
 	/>
 	<node 
 		id="Button 3" 
-		actionPress="Start Script" argPress="E:\Projet\Simnext\SNCFSNTrainSim\deploy\Startup\Start_Local.bat"
-		actionHold="Start Script" argHold="E:\Projet\Simnext\SNCFSNTrainSim\deploy\Startup\KillAll.bat"
+		actionPress="script" argPress="E:\Projet\Simnext\SNCFSNTrainSim\deploy\Startup\Start_Local.bat"
+		actionHold="script" argHold="E:\Projet\Simnext\SNCFSNTrainSim\deploy\Startup\KillAll.bat"
 	/>
 	<node 
 		id="Button 4" 
-		actionPress="Start Script" argPress="C:\Users\villa\Documents\ScriptTest.bat"
-		actionHold="Start Script" argHold=""
+		actionPress="script" argPress="C:\Users\villa\Documents\ScriptTest.bat"
+		actionHold="script" argHold=""
 	/>
 </config>

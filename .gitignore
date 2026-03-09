@@ -54,3 +54,8 @@ ReleasetinyxmlSTL
 ReleasetinyXmlTest
 ReleasetinyXmlTestSTL
 x64
+Debug
+Debugtinyxml
+DebugtinyxmlSTL
+DebugtinyXmlTest
+DebugtinyXmlTestSTL
