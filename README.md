@@ -33,8 +33,8 @@ Button actions are defined in the config.xml file.
 <config>
 	<node 
 		id="Button 1" 
-		actionPress="Start Script" argPress="C:\Simulator\script1.bat" 
-		actionHold="Start Script" argHold="C:\Simulator\script1H.bat"
+		actionPress="script" argPress="C:\Simulator\script1.bat" 
+		actionHold="script" argHold="C:\Simulator\script1H.bat"
 	/>
 	<node 
 		id="Button 2" 
