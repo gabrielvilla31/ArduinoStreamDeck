@@ -54,9 +54,12 @@ Button actions are defined in the config.xml file.
 </config>
 ```
 ▶️ Currently Supported Action
-Action Type	    Description
-script	        Launches a script (.bat, .ps1, .exe, etc.)
-lock			Locks the screen and stop music.
+Action  Description
+
+script  Launches a script (.bat, .ps1, .exe, etc.)
+
+lock  Locks the screen and stop music.
+
 shutdown		Shutdowns the computer
 
 🖨️ 3D Printable Enclosure
@@ -80,6 +83,8 @@ Place config.xml in the same directory as the executable
 
 🧪 Quick Test
 
-Start the C++ application
-Press one of the buttons
+Open the Solution and compile it 
+Execute StartDaemon.bat
+Put arduino program on arduino board with buttons
+Push buttons
 Verify that the corresponding script is executed
