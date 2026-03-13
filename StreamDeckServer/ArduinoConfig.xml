@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<config test="plop">
+<config>
 	<node 
 		id="Button 1" 
 		actionPress="script" argPress="C:\Simulator\scripts\basex\RunBaseXHTTPServer.bat" 
@@ -7,17 +7,17 @@
 	/>
 	<node 
 		id="Button 2" 
-		actionPress="script" argPress="E:\Projet\PSCHITTtrain\PSCHITT\deploy\Startup\Start_Local_Dev.bat"
-		actionHold="script" argHold="E:\Projet\PSCHITTtrain\PSCHITT\deploy\Startup\KillAll.bat"
+		actionPress="script" argPress="E:\Projet\Houston\HOUMTATramBusSim\deploy\startup\Start_Local.bat"
+		actionHold="script" argHold="E:\Projet\Houston\HOUMTATramBusSim\deploy\startup\KillAll.bat"
 	/>
 	<node 
 		id="Button 3" 
 		actionPress="lock" argPress=""
-		actionHold="script" argHold=""
+		actionHold="shutdown" argHold=""
 	/>
 	<node 
 		id="Button 4" 
-		actionPress="script" argPress="C:\Users\villa\Documents\ScriptTest.bat"
+		actionPress="script" argPress=""
 		actionHold="script" argHold=""
 	/>
 </config>

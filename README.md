@@ -38,24 +38,26 @@ Button actions are defined in the config.xml file.
 	/>
 	<node 
 		id="Button 2" 
-		actionPress="Start Script" argPress="E:\Projet\script2.bat"
-		actionHold="Start Script" argHold="E:\Projet\script2H.bat"
+		actionPress="lock" argPress=""
+		actionHold="shutdown" argHold=""
 	/>
 	<node 
 		id="Button 3" 
-		actionPress="Start Script" argPress="E:\Projet\script3.bat"
-		actionHold="Start Script" argHold="E:\Projet\script3H.bat"
+		actionPress="" argPress=""
+		actionHold="" argHold=""
 	/>
 	<node 
 		id="Button 4" 
-		actionPress="Start Script" argPress="E:\Projet\script4.bat"
-		actionHold="Start Script" argHold="E:\Projet\script4H.bat"
+		actionPress="" argPress=""
+		actionHold="" argHold=""
 	/>
 </config>
 ```
 ▶️ Currently Supported Action
 Action Type	    Description
 script	        Launches a script (.bat, .ps1, .exe, etc.)
+lock			Locks the screen and stop music.
+shutdown		Shutdowns the computer
 
 🖨️ 3D Printable Enclosure
 The repository includes a .stl 3D model for a custom enclosure designed to house:

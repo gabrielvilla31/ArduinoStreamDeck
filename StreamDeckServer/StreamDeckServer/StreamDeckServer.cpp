@@ -160,6 +160,10 @@ void LockPcAndMute() {
 	LockWorkStation();
 }
 
+void ShutdownPC() {
+	system("shutdown /s /t 0");
+}
+
 void ExecuteAction(const std::string& id, const std::vector<actionBoutton>& buttonsAction)
 {
 	//Read Acion and do it
@@ -179,6 +183,10 @@ void ExecuteAction(const std::string& id, const std::vector<actionBoutton>& butt
 		if (actionToPerform == "lock")
 		{
 			LockPcAndMute();
+		}
+		if (actionToPerform == "shutdown")
+		{
+			ShutdownPC();
 		}
 	}
 
