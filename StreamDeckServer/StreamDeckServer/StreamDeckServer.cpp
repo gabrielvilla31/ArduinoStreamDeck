@@ -64,14 +64,14 @@ void ReadConfig(const std::string& path, std::vector<actionBoutton>& buttonsActi
 }
 
 //arg press : 1 for press, 0 for hold
-std::string GetAction(const std::string& id, const std::vector<actionBoutton>& buttonsAction,bool press) {
+std::string GetAction(const std::string& id, const std::vector<actionBoutton>& buttonsAction, bool press) {
 
 	for (int i = 0; i < buttonsAction.size(); i++)
 	{
 		if (id == buttonsAction[i].id)
 		{
 			if (press) {
-			return buttonsAction[i].actionToPerfomPress;
+				return buttonsAction[i].actionToPerfomPress;
 			}
 			else return buttonsAction[i].actionToPerfomHold;
 		}
@@ -90,7 +90,7 @@ std::string GetArg(const std::string& id, const std::vector<actionBoutton>& butt
 				return buttonsAction[i].argPress;
 			}
 			else return buttonsAction[i].argHold;
-			
+
 		}
 	}
 	return "None";
@@ -199,18 +199,9 @@ void Loop(const std::vector<actionBoutton>& buttonsAction)
 	DCB dcbSerialParams = { 0 };
 	COMMTIMEOUTS timeouts = { 0 };
 	std::vector<std::string> ports;
-	ports.push_back("\\\\.\\COM0");
-	ports.push_back("\\\\.\\COM1");
-	ports.push_back("\\\\.\\COM2");
-	ports.push_back("\\\\.\\COM3");
-	ports.push_back("\\\\.\\COM4");
-	ports.push_back("\\\\.\\COM5");
-	ports.push_back("\\\\.\\COM6");
-	ports.push_back("\\\\.\\COM7");
-	ports.push_back("\\\\.\\COM8");
-	ports.push_back("\\\\.\\COM9");
-
-	//char portName[] = "\\\\.\\COM5";  
+	for (int i = 0; i < 10; i++) {
+		ports.push_back("\\\\.\\COM"+ std::to_string(i));
+	}
 
 	while (true) {
 
@@ -259,8 +250,8 @@ void Loop(const std::vector<actionBoutton>& buttonsAction)
 						buffer[bytesRead] = '\0';  // Fin de chaîne
 						std::cout << "Received: " << buffer << ". ";
 						std::string id(buffer);
-						std::thread worker(ExecuteAction,id, buttonsAction);  // Launch thread
-						worker.detach();  
+						std::thread worker(ExecuteAction, id, buttonsAction);  // Launch thread
+						worker.detach();
 					}
 				}
 				else {
